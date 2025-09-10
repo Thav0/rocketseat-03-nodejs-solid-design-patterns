@@ -19,9 +19,6 @@ export class AuthenticateUseCase {
     email,
     password,
   }: AuthenticateUseCaseRequest): Promise<AuthenticateUseCaseResponse> {
-    // Check email
-    // Check if the database password matches with the informed
-
     const user = await this.usersRepository.findByEmail(email)
 
     if (!user) {
